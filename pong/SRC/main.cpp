@@ -1,8 +1,9 @@
 #include "gamemanager.h"
 #include "ball.h"
-#include<GLFW/glfw3.h>
-#include <gl/gl.h>
 
+// Controls are w and s For player 1.
+// Controls are i and k For player 2.
+// Small bugs and flicker are there, trying to fix them.
 
 
 
@@ -12,37 +13,10 @@ using namespace game;
 
 int main()
 {	
-	//gamemanager g(40, 20);
-	//g.run();
-	//system("PAUSE");
-	GLFWwindow * window;
+	gamemanager g(40, 20);
+	g.run();
+	system("PAUSE");
 
-	glfwInit();
-
-	window = glfwCreateWindow(640, 480, "Hello world", NULL, NULL);
-	if (!window)
-	{
-		glfwTerminate();
-		std::cout << "Failed to load windows";
-		system("PAUSE");
-		return 0;
-	}
-	glfwMakeContextCurrent(window);
-	while (!glfwWindowShouldClose(window))
-	{
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glBegin(GL_QUADS);
-		glVertex2d(-0.5f, -0.5f);
-		glVertex2d(-0.5f, 0.5f);
-		glVertex2d(0.5f, 0.5f);
-		glVertex2d(0.5f, -0.5f);
-		glEnd();
-		glfwPollEvents();
-		glfwSwapBuffers(window);
-
-		
-	}
-	glfwPollEvents();
 	
 	return 0;
 

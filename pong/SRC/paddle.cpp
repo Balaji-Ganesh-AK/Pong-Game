@@ -39,3 +39,9 @@ void paddle::reset()
 	currentX = originalX;
 	currentY = originalY;
 }
+
+std::ostream & pong_paddle::operator<<(std::ostream & stream, paddle b)
+{
+	stream << "Paddle [" << b.currentX << "," << b.currentY << "]";
+	return stream;
+}

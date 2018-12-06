@@ -53,7 +53,7 @@ void game::gamemanager::draw()
 {
 	system("cls");
 	
-
+	
 	for (int i = 0; i < width + 2; i++)
 		std::cout << "\xDB";
 	std::cout << std::endl;
@@ -66,20 +66,28 @@ void game::gamemanager::draw()
 				std::cout << "\xDB";
 			if (cballx ==j && cbally == i)
 				std::cout << "O";
+
 			else if (cpaddle_1x == j && cpaddle_1y == i)
 				std::cout << "\xBA";
+
 			else if (cpaddle_2x == j && cpaddle_2y == i)
 				std::cout << "\xBA";
-			else if (cpaddle_1x == j && cpaddle_1y+1 == i)
+
+			else if (cpaddle_1x == j && cpaddle_1y + 1 == i)
 				std::cout << "\xBA";
-			else if (cpaddle_1x == j && cpaddle_1y+2 == i)
+
+			else if (cpaddle_1x == j && cpaddle_1y + 2 == i)
 				std::cout << "\xBA";
-			else if (cpaddle_1x == j && cpaddle_1y+3 == i)
+
+			else if (cpaddle_1x == j && cpaddle_1y + 3 == i)
 				std::cout << "\xBA";
+
 			else if (cpaddle_2x == j && cpaddle_2y + 1 == i)
 				std::cout << "\xBA";
+
 			else if (cpaddle_2x == j && cpaddle_2y + 2 == i)
 				std::cout << "\xBA";
+
 			else if (cpaddle_2x == j && cpaddle_2y + 3 == i)
 				std::cout << "\xBA";
 			else
@@ -145,7 +153,7 @@ void gamemanager::logic()
 		{
 			if (cbally== cpaddle_1y+i)
 			{
-				cball->changeDirection((direction)((rand()%3)+4));
+				cball->changeDirection((direction)((rand() % 3 )+4));
 			}
 		}
 	}
@@ -180,6 +188,7 @@ void gamemanager::run()
 		draw();
 		input();
 		logic();
+		
 
 	}
 }

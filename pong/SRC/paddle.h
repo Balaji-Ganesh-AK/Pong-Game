@@ -19,6 +19,7 @@
 			void moveUp();
 			void moveDown();
 			void reset();
+			friend std::ostream& operator<<(std::ostream & stream, paddle b);
 
 		};
 	}
