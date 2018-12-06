@@ -1,7 +1,6 @@
 #include "gamemanager.h"
 #include "ball.h"
-#include<GLFW/glfw3.h>
-#include <gl/gl.h>
+
 
 
 
