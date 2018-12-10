@@ -1,5 +1,6 @@
 #include "gamemanager.h"
 #include <time.h>
+#include <Windows.h>
 using namespace pong_ball;
 using namespace pong_paddle;
 using namespace game;
@@ -51,7 +52,10 @@ void game::gamemanager::getValues()
 
 void game::gamemanager::draw()
 {
-	system("cls");
+	//system("cls");
+	COORD pos = {0,10};
+	HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleCursorPosition(output, pos);
 	
 	
 	for (int i = 0; i < width + 2; i++)

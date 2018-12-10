@@ -3,7 +3,7 @@
 
 // Controls are w and s For player 1.
 // Controls are i and k For player 2.
-// Small bugs and flicker are there, trying to fix them.
+
 
 
 
